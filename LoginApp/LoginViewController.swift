@@ -13,12 +13,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 10
         
     }
-    // Метод для скрытия клавиатуры тапом по экрану
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -27,7 +28,7 @@ class LoginViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userTextLabel = loginTF.text
     }
-    
+    // MARK: - IB Actions
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         loginTF.text = ""
         passwordTF.text = ""
@@ -49,7 +50,7 @@ class LoginViewController: UIViewController {
         }
     }
         
-      
+    // MARK: - Private Methods
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAktion = UIAlertAction(title: "ok", style: .default) { _ in
