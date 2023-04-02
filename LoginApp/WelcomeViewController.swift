@@ -23,8 +23,4 @@ class WelcomeViewController: UIViewController {
         gradientLayer.colors = [UIColor.systemPurple.cgColor, UIColor.systemTeal.cgColor]
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
-    
-
-    
-
 }
