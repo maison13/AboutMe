@@ -34,15 +34,15 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotNameTapped() {
-        showAlert(withTitle: "Oops", andMessage: "Your  name is User")
+        showAlert(withTitle: "Oops", andMessage: "Your  name is Guest \u{1F609}")
     }
     
     @IBAction func forgotPasswordTapped() {
-        showAlert(withTitle: "Oops", andMessage: "Your  password is 123")
+        showAlert(withTitle: "Oops", andMessage: "Your  password is 123 \u{1F60B}")
     }
     
     @IBAction func loginButtonTapped() {
-        if loginTF.text != "User" {
+        if loginTF.text != "Guest" {
             showAlert(withTitle: "Login or password is not correct", andMessage: "Try logging in again")
         } else if passwordTF.text != "123" {
             showAlert(withTitle: "Login or password is not correct", andMessage: "Try logging in again")
