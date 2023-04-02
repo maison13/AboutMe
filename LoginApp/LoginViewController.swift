@@ -60,10 +60,16 @@ class LoginViewController: UIViewController {
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAktion = UIAlertAction(title: "ok", style: .default) { _ in
-            self.passwordTF.text = ""
+            switch message {
+            case "Your  name is Guest \u{1F609}":
+                self.loginTF.text = ""
+            default:
+                self.passwordTF.text = ""
+            }
         }
         alert.addAction(okAktion)
         present(alert, animated: true)
     }
 }
+
 
