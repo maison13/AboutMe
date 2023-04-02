@@ -35,21 +35,27 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotNameTapped() {
-        showAlert(withTitle: "Oops", andMessage: "Your  name is Guest \u{1F609}")
+        showAlert(
+            withTitle: "Oops",
+            andMessage: "Your  name is Guest \u{1F609}"
+        )
     }
     
     @IBAction func forgotPasswordTapped() {
-        showAlert(withTitle: "Oops", andMessage: "Your  password is Pass \u{1F60B}")
+        showAlert(
+            withTitle: "Oops",
+            andMessage: "Your  password is Pass \u{1F60B}"
+        )
     }
     
     @IBAction func loginButtonTapped() {
-        if loginTF.text != "Guest" {
-            showAlert(withTitle: "Login or password is not correct", andMessage: "Try logging in again")
-        } else if passwordTF.text != "Pass" {
-            showAlert(withTitle: "Login or password is not correct", andMessage: "Try logging in again")
+        if loginTF.text != "Guest" || passwordTF.text != "Pass" {
+            showAlert(
+                withTitle: "Login or password is not correct",
+                andMessage: "Try logging in again"
+            )
         }
     }
-        
     // MARK: - Private Methods
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
