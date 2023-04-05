@@ -329,7 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RAC7J8P879;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AboutMe;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -362,7 +362,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RAC7J8P879;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AboutMe;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
