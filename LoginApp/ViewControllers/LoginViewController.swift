@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
         passwordTF.text = user.password
         
         loginButton.layer.cornerRadius = 10
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,8 +37,14 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userTextLabel = user.userName
                 welcomeVC.welcomeName = user.person.name
-            } else if let userVC = viewController as? UINavigationController {
-                userVC.
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let userVC = navigationVC.topViewController as? UserViewController else { return }
+                userVC.nameTextLabel = user.person.name
+                userVC.surnameTextLabel = user.person.surname
+                userVC.companyTextLabel = user.person.company
+                userVC.departmentTextLabel = user.person.department
+                userVC.postTextLabel = user.person.post
+                userVC.biographyTextLabel = user.person.biography
             }
         }
     }
@@ -75,7 +80,7 @@ class LoginViewController: UIViewController {
         alert.addAction(okAktion)
         present(alert, animated: true)
     }
-    
+
 }
 
 
