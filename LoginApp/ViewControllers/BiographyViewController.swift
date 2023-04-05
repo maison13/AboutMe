@@ -7,18 +7,20 @@
 
 import UIKit
 
-class BiographyViewController: UIViewController {
-
+final class BiographyViewController: UIViewController {
+   
+    @IBOutlet weak var biographyLabel: UILabel!
+    
+    var biographyTextLabel: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        biographyLabel.text = biographyTextLabel 
 
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [UIColor.systemPurple.cgColor, UIColor.systemTeal.cgColor]
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
-    
-
-    
 
 }
