@@ -15,8 +15,8 @@ struct User {
         User(
             person:
                 Person(
-                    name: "Мэтт",
-                    surname: "Дэймон",
+                    name: "Matt",
+                    surname: "Damon",
                     company: "Warner Bros.",
                     department: "Movie",
                     post: "Actor",
