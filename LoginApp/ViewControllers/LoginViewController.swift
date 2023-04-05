@@ -31,10 +31,17 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userTextLabel = user.userName
-        welcomeVC.welcomeName = user.person.name
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userTextLabel = user.userName
+                welcomeVC.welcomeName = user.person.name
+            } else if let userVC = viewController as? UINavigationController {
+                userVC.
+            }
+        }
     }
     // MARK: - IB Actions
     @IBAction func unwind(for segue: UIStoryboardSegue) {
