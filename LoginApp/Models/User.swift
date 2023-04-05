@@ -17,7 +17,7 @@ struct User {
                 Person(
                     name: "Matt",
                     surname: "Damon",
-                    company: "Warner Bros.",
+                    company: "Artists Equity",
                     department: "Movie",
                     post: "Actor",
                     biography: """
