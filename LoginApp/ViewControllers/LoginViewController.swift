@@ -14,9 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     private let user = User.getUser()
-    // private let login = "Guest"
-    // private let password = "Pass"
-    
+   
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +33,8 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userTextLabel = user.userName
+        welcomeVC.welcomeName = user.person.name
+        
     }
     // MARK: - IB Actions
     @IBAction func unwind(for segue: UIStoryboardSegue) {
