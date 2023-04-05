@@ -43,8 +43,7 @@ class LoginViewController: UIViewController {
             ? showAlert(withTitle: "Oops", andMessage: "Your  name is Guest \u{1F609}")
             : showAlert(withTitle: "Oops", andMessage: "Your  password is Pass \u{1F60B}")
     }
-
-    
+   
     @IBAction func loginButtonTapped() {
         guard loginTF.text == login, passwordTF.text == password else {
             showAlert(
