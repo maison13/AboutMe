@@ -13,12 +13,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    private let login = "Guest"
-    private let password = "Pass"
+    private let user = User.getUser()
+    // private let login = "Guest"
+    // private let password = "Pass"
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginTF.text = user.login
+        passwordTF.text = user.password
+        
         loginButton.layer.cornerRadius = 10
         
     }
@@ -30,7 +34,7 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userTextLabel = login
+        welcomeVC.userTextLabel = user.userName
     }
     // MARK: - IB Actions
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -45,7 +49,7 @@ class LoginViewController: UIViewController {
     }
    
     @IBAction func loginButtonTapped() {
-        guard loginTF.text == login, passwordTF.text == password else {
+        guard loginTF.text == user.login, passwordTF.text == user.password else {
             showAlert(
                 withTitle: "Login or password is not correct",
                 andMessage: "Try logging in again",
