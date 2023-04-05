@@ -157,11 +157,7 @@
                             <constraint firstItem="7ah-0c-MhB" firstAttribute="trailing" secondItem="LWa-1P-0ya" secondAttribute="trailing" constant="119" id="wwb-PT-oYa"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="5Yg-kN-Nmx">
-                        <string key="selectedImage" base64-UTF8="YES">
-CQ
-</string>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="5Yg-kN-Nmx"/>
                     <connections>
                         <outlet property="userLabel" destination="5wa-ag-0hc" id="mGe-wx-894"/>
                         <outlet property="welcomeLabel" destination="fch-CB-Zb7" id="BDi-hj-4H3"/>
@@ -180,15 +176,15 @@ CQ
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Matt Daimon" translatesAutoresizingMaskIntoConstraints="NO" id="72Z-5l-ZLo">
-                                <rect key="frame" x="104" y="108.5" width="112" height="165"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Matt-Damon" translatesAutoresizingMaskIntoConstraints="NO" id="72Z-5l-ZLo">
+                                <rect key="frame" x="23.5" y="108.5" width="273" height="218"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="165" id="GJG-D6-yov"/>
-                                    <constraint firstAttribute="width" constant="112" id="ted-TW-8Qz"/>
+                                    <constraint firstAttribute="height" constant="218" id="GJG-D6-yov"/>
+                                    <constraint firstAttribute="width" constant="273" id="ted-TW-8Qz"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1gp-Fd-8E0">
-                                <rect key="frame" x="16" y="299" width="94" height="134.5"/>
+                                <rect key="frame" x="16" y="352" width="94" height="134.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le5-qg-tEo">
                                         <rect key="frame" x="0.0" y="0.0" width="38" height="20.5"/>
@@ -223,10 +219,13 @@ CQ
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZRw-F2-cjQ">
-                                <rect key="frame" x="130" y="300" width="41.5" height="134.5"/>
+                                <rect key="frame" x="130" y="353" width="41.5" height="134.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHO-2R-D6H">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -269,6 +268,7 @@ CQ
                             <constraint firstItem="ZRw-F2-cjQ" firstAttribute="leading" secondItem="1gp-Fd-8E0" secondAttribute="trailing" constant="20" id="xZB-zz-obj"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="tL2-55-id3"/>
                     <navigationItem key="navigationItem" title="Matt Daimon" id="Mg1-xw-IMa">
                         <barButtonItem key="rightBarButtonItem" title="Bio" image="list.bullet.clipboard" catalog="system" id="0vk-Pl-52T">
                             <connections>
@@ -276,6 +276,13 @@ CQ
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="companyLabel" destination="dXy-u4-RVr" id="rg7-mL-SuF"/>
+                        <outlet property="departmentLabel" destination="Bzn-Rg-ABb" id="fOp-1t-kwA"/>
+                        <outlet property="nameLabel" destination="hHO-2R-D6H" id="MTT-ws-MlM"/>
+                        <outlet property="postLaberl" destination="T27-Vg-Lo4" id="hOf-sZ-txb"/>
+                        <outlet property="surnameLabel" destination="mtF-LG-9KK" id="Dwe-UQ-r5o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntq-Mb-reL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,14 +296,14 @@ CQ
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Краткая биография" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7I-1t-sHq">
-                                <rect key="frame" x="16" y="100" width="166" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Краткая биография:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7I-1t-sHq">
+                                <rect key="frame" x="16" y="100" width="166" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmN-Nc-c7R">
-                                <rect key="frame" x="16" y="151" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmN-Nc-c7R">
+                                <rect key="frame" x="16" y="150.5" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -305,6 +312,7 @@ CQ
                         <viewLayoutGuide key="safeArea" id="s7y-KU-I1D"/>
                         <color key="backgroundColor" red="0.85969065656565657" green="0.85969065656565657" blue="0.85969065656565657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="s7y-KU-I1D" firstAttribute="trailing" secondItem="dmN-Nc-c7R" secondAttribute="trailing" constant="16" id="Kwu-sg-SoR"/>
                             <constraint firstItem="z7I-1t-sHq" firstAttribute="top" secondItem="zrq-35-IHa" secondAttribute="top" constant="100" id="Lf6-9w-dSR"/>
                             <constraint firstItem="z7I-1t-sHq" firstAttribute="leading" secondItem="s7y-KU-I1D" secondAttribute="leading" constant="16" id="dnl-vu-AHR"/>
                             <constraint firstItem="dmN-Nc-c7R" firstAttribute="leading" secondItem="s7y-KU-I1D" secondAttribute="leading" constant="16" id="ocF-dK-YXu"/>
@@ -313,17 +321,21 @@ CQ
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eb1-J6-g2G"/>
+                    <connections>
+                        <outlet property="biographyLabel" destination="dmN-Nc-c7R" id="guK-6W-EGS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wt-cu-Lym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3536" y="820"/>
+            <point key="canvasLocation" x="3534.375" y="819.71830985915494"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Dx6-mm-0No">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IN0-g8-B0K" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="IN0-g8-B0K" customClass="TabBarViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M7G-Gd-Qm2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -357,12 +369,7 @@ CQ
         </scene>
     </scenes>
     <resources>
-        <image width="128" height="128">
-            <string key="name" base64-UTF8="YES">
-CQ
-</string>
-        </image>
-        <image name="Matt Daimon" width="265" height="420"/>
+        <image name="Matt-Damon" width="1093" height="873"/>
         <image name="hands" width="2496" height="1817"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
