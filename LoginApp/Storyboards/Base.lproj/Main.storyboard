@@ -136,13 +136,21 @@
                                     <constraint firstAttribute="width" constant="98" id="By8-xK-Wx5"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fch-CB-Zb7">
+                                <rect key="frame" x="139.5" y="128" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7ah-0c-MhB"/>
                         <color key="backgroundColor" red="0.88888035250339947" green="0.88025044616841486" blue="0.89751025883838387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fch-CB-Zb7" firstAttribute="top" secondItem="kyf-01-5AC" secondAttribute="bottom" constant="7.5" id="NsQ-HB-WUu"/>
                             <constraint firstItem="LWa-1P-0ya" firstAttribute="leading" secondItem="7ah-0c-MhB" secondAttribute="leading" constant="119" id="anI-In-gP4"/>
                             <constraint firstItem="ChD-jR-5n0" firstAttribute="top" secondItem="kyf-01-5AC" secondAttribute="bottom" constant="48.5" id="cRU-Mj-j20"/>
                             <constraint firstItem="CVa-Lh-QMI" firstAttribute="centerX" secondItem="ZFw-Ks-fYd" secondAttribute="centerX" id="ddo-jP-prQ"/>
+                            <constraint firstItem="fch-CB-Zb7" firstAttribute="centerX" secondItem="ZFw-Ks-fYd" secondAttribute="centerX" id="gu6-nv-9tP"/>
                             <constraint firstItem="7ah-0c-MhB" firstAttribute="bottom" secondItem="LWa-1P-0ya" secondAttribute="bottom" constant="126" id="iPa-Ju-bet"/>
                             <constraint firstItem="CVa-Lh-QMI" firstAttribute="top" secondItem="7ah-0c-MhB" secondAttribute="top" constant="100" id="lYN-5i-Kcr"/>
                             <constraint firstItem="ChD-jR-5n0" firstAttribute="centerX" secondItem="ZFw-Ks-fYd" secondAttribute="centerX" id="rit-Fy-n3Q"/>
@@ -151,7 +159,7 @@
                     </view>
                     <connections>
                         <outlet property="userLabel" destination="5wa-ag-0hc" id="mGe-wx-894"/>
-                        <outlet property="welcomeLabel" destination="kyf-01-5AC" id="7HX-Xl-iA4"/>
+                        <outlet property="welcomeLabel" destination="fch-CB-Zb7" id="BDi-hj-4H3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShS-AQ-Tai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
